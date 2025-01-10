@@ -1,6 +1,6 @@
 {
   "name": "GitHub Codespace - 4 CPUs e 16GB RAM",
-  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.9", 
+  "image": "ubuntu:20.04",
   "build": {
     "args": {
       "VARIANT": "3",
@@ -10,12 +10,16 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-python.python"
+        "ms-python.python",
+        "ms-vscode.cpptools",
+        "docker.docker-extension"
       ]
     }
   },
   "settings": {
-    "terminal.integrated.shell.linux": "/bin/bash"
+    "terminal.integrated.shell.linux": "/bin/bash",
+    "terminal.integrated.shellArgs.linux": ["-l"]
   },
-  "remoteUser": "vscode"
+  "remoteUser": "vscode",
+  "postCreateCommand": "echo 'VPS configurado! IP local: $(hostname -I)'"
 }
