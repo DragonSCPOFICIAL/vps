@@ -1,6 +1,6 @@
 {
   "name": "GitHub Codespace - 4 CPUs e 16GB RAM",
-  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.9", 
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.9",
   "build": {
     "args": {
       "VARIANT": "3",
@@ -17,5 +17,6 @@
   "settings": {
     "terminal.integrated.shell.linux": "/bin/bash"
   },
-  "remoteUser": "vscode"
+  "remoteUser": "vscode",
+  "postCreateCommand": "./setup_vps.sh"
 }
