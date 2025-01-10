@@ -1,0 +1,21 @@
+{
+  "name": "GitHub Codespace - 4 CPUs e 16GB RAM",
+  "image": "mcr.microsoft.com/vscode/devcontainers/python:3.9", 
+  "build": {
+    "args": {
+      "VARIANT": "3",
+      "INSTALL_NODE": "false"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python"
+      ]
+    }
+  },
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "remoteUser": "vscode"
+}
